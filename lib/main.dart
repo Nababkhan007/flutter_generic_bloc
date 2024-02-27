@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_generic_bloc/view/author_view.dart';
 
 void main() => runApp(const GenericBloc());
 
@@ -9,18 +10,10 @@ class GenericBloc extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
         useMaterial3: true,
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: const Text("Generic Bloc"),
-        ),
-        body: const Center(
-          child: Text("Home page"),
-        ),
-      ),
+      home: const AuthorView(),
     );
   }
 }
